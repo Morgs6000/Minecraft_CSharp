@@ -238,6 +238,8 @@ public class Camera
     private void ProcessCollision()
     {
         UpdateCameraBox();
+
+        onGround = false;
         
         List<AABB> cubes = level.GetCubes(cameraBox);
 
