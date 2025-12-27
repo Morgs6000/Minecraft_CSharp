@@ -42,11 +42,11 @@ Abaixo, links de acesso rapido as pastas que estão em progresso ou ja foram con
 
 ### Pré-Classico
 
-* [rd-131655 (Cave game tech test)](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/1.%20Pre-Classic/01.%20rd-131655%20(Cave%20game%20tech%20test))
-* rd-132211
-* rd-132328
-* rd-160052
-* rd-161348
+* [rd-131655 (Cave game tech test)](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/01.%20Pre-Classic/01.%20rd-131655%20(Cave%20game%20tech%20test))
+* [rd-132211](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/01.%20Pre-Classic/02.%20rd-132211)
+* [rd-132328](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/01.%20Pre-Classic/03.%20rd-132328)
+* [rd-160052](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/01.%20Pre-Classic/04.%20rd-160052)
+* [rd-161348](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/01.%20Pre-Classic/05.%20rd-160052)
 
 ### Clássico
 
