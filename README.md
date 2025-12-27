@@ -8,6 +8,10 @@ Para de reclamar que tem um monte de pasta, procura a p@#$% da pasta que você q
 
 Este projeto tem como objetivo recriar as primeiras versões do Minecraft usando a linguagem C# e a blioteca OpenTK.
 
+Quem quiser ajudar com o projeto seja bem-vindo a se juntar a nós no Discord:
+
+<img src="https://github.com/user-attachments/assets/fe0fedfb-5be2-4ccd-bf54-f61446301e84" width="30" height="30"> [Discord](https://discord.gg/2NHGc8PHmq)
+
 ## Ferramentas e Tecnologias
 
 <img src="https://github.com/user-attachments/assets/3717a45d-d2d6-4d70-8cbe-aab0816e3c6c" width="30" height="30"> VS Code
@@ -18,7 +22,7 @@ Este projeto tem como objetivo recriar as primeiras versões do Minecraft usando
 
 <img src="https://github.com/user-attachments/assets/ef9fb0e1-d0fd-4632-bbf5-e1623cd32a6a" width="30" height="30"> OpenTK
 
-<img src="https://github.com/user-attachments/assets/e59048c2-1bb9-4b35-93e4-f9769cfffc68" width="30" height="30"> StblImageSharp
+<img src="https://github.com/user-attachments/assets/e59048c2-1bb9-4b35-93e4-f9769cfffc68" width="30" height="30"> StbImageSharp
 
 ## Versões
 
