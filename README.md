@@ -4,7 +4,7 @@ Para de reclamar que tem um monte de pasta, procura a p@#$% da pasta que você q
 
 <img src="https://github.com/user-attachments/assets/ed00c22a-2aa4-4854-be83-83e270da6d27" width="30" height="30"> [Download GitHub Directory](https://download-directory.github.io/)
 
-## Sobre
+## 📖 Sobre
 
 Este projeto tem como objetivo recriar as primeiras versões do Minecraft usando a linguagem C# e a blioteca OpenTK.
 
@@ -20,7 +20,7 @@ E o instagram, só pra ter...
 
 <img src="https://github.com/user-attachments/assets/c30107c0-a584-4a00-80c1-960ec2075591" width="15" height="15"> [stradivarius_dev](https://www.instagram.com/stradivarius_dev/)
 
-## Ferramentas e Tecnologias
+## 🛠️ Ferramentas e Tecnologias
 
 <img src="https://github.com/user-attachments/assets/3717a45d-d2d6-4d70-8cbe-aab0816e3c6c" width="30" height="30"> VS Code
 
@@ -32,7 +32,7 @@ E o instagram, só pra ter...
 
 <img src="https://github.com/user-attachments/assets/e59048c2-1bb9-4b35-93e4-f9769cfffc68" width="30" height="30"> StbImageSharp
 
-## Bugs
+## 🐞 Bugs
 
 **rd-131655 (Cave game tech test)**
 * O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede.
@@ -48,12 +48,12 @@ E o instagram, só pra ter...
   * O arquivo comprimido pesa cerca de 30 KB, enquanto o arquivo não comprido pesa cerca de 4.000 KB, isso falando de um mundo de 256x64x256 blcoos (16x4x16 chunks).
 * não sei gerar o bloco da GUI e a mira na mesma malha, se é que isso é possivel.
 
-## Correções
+## 📝 Correções
 
 * Altura da camera corrigina.
 * Escalada aranha corrigida, mas se o jogador ficar pressionando Espaço contra uma parede, ainda consegue escalar.
 
-## Versões
+## 💾 Versões
 
 Todas as versões podem ser consultadas na Wiki do Minecraft. Abaixam estão listadas apenas versões que adicionam ou mudam alguma coisa no jogo, não se assuste, algumas versões adicionam apenas um bloco ou item, e obviamente não faremos tudo, uma das coisas que pensamos em descartar são coisas originais do Minecraft, como Creepers e Redstone. Nas primeiras versões o mundo era limitado a 256x64x256 blocos. O objetivo até o momento é chegar até a versão Infdev, onde o mundo se torna infinito.
 
