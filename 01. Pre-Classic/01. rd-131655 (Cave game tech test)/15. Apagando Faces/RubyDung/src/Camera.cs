@@ -105,7 +105,7 @@ public class Camera
         Yaw += xoffset;
         Pitch += yoffset;
 
-        MathHelper.Clamp(Pitch, -89.0f, 89.0f);
+        Pitch = MathHelper.Clamp(Pitch, -89.0f, 89.0f);
 
         UpdateCameraVectors();
     }
