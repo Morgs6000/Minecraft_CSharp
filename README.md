@@ -32,6 +32,12 @@ E o instagram, só pra ter...
 
 <img src="https://github.com/user-attachments/assets/e59048c2-1bb9-4b35-93e4-f9769cfffc68" width="30" height="30"> StbImageSharp
 
+## Bugs
+
+* Precisa arrumar a altura da Camera
+* O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede
+* O arquivo 'level.dat' comprimido apresenta problemas para salvar e carregar o jogo
+
 ## Versões
 
 Todas as versões podem ser consultadas na Wiki do Minecraft. Abaixam estão listadas apenas versões que adicionam ou mudam alguma coisa no jogo, não se assuste, algumas versões adicionam apenas um bloco ou item, e obviamente não faremos tudo, uma das coisas que pensamos em descartar são coisas originais do Minecraft, como Creepers e Redstone. Nas primeiras versões o mundo era limitado a 256x64x256 blocos. O objetivo até o momento é chegar até a versão Infdev, onde o mundo se torna infinito.
