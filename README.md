@@ -35,8 +35,6 @@ E o instagram, só pra ter...
 ## Bugs
 
 **rd-131655 (Cave game tech test)**
-* Precisa arrumar a altura da Camera.
-  * O jogador tem uma largura de 0.6f, altura de 1.8f, e altura dos olhos de 1.62f.
 * O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede.
 
 **rd-132211**
@@ -49,6 +47,11 @@ E o instagram, só pra ter...
 * O arquivo 'level.dat' comprimido apresenta problemas para salvar e carregar o jogo.
   * O arquivo comprimido pesa cerca de 30 KB, enquanto o arquivo não comprido pesa cerca de 4.000 KB, isso falando de um mundo de 256x64x256 blcoos (16x4x16 chunks).
 * não sei gerar o bloco da GUI e a mira na mesma malha, se é que isso é possivel.
+
+## Correções
+
+* Altura da camera corrigina.
+* Escalada aranha corrigida, mas se o jogador ficar pressionando Espaço contra uma parede, ainda consegue escalar.
 
 ## Versões
 
