@@ -122,11 +122,6 @@ public class Camera
 
         ProcessCollision();
         ProcessGravity();
-
-        if (keyboardState.IsKeyDown(Keys.R))
-        {
-            ResetPos();
-        }
     }
 
     private void ProcessTime()

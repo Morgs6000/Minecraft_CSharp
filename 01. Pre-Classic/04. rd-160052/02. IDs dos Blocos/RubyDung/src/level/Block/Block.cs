@@ -2,7 +2,8 @@ namespace RubyDung;
 
 public class Block
 {
-    public static readonly List<Block> blocks = new List<Block>();
+    public static readonly Block[] blocks = new Block[256];
+    // public static readonly List<Block> blocks = new List<Block>();
 
     public static readonly Block empty = null!;
     public static readonly Block rock = new Block(1, 1);
@@ -11,13 +12,18 @@ public class Block
     public static readonly Block stoneBrick = new Block(4, 16);
     public static readonly Block wood = new Block(5, 4);
 
-    public readonly int id;
     public int tex;
+    public readonly int id;
 
     protected Block(int id)
     {
-        blocks.Add(this);
+        // Garantir que a lista tenha capacidade suficiente
+        // while (blocks.Count <= id)
+        // {
+        //     blocks.Add(null);
+        // }
 
+        blocks[id] = this;
         this.id = id;
     }
 
@@ -36,46 +42,46 @@ public class Block
         {
             mesh.Color(c1, c1, c1);
 
-            LoadFace(mesh, x, y, z, 0);
+            LodaFace(mesh, x, y, z, 0);
         }
         if (!level.IsSolidBlock(x + 1, y, z))
         {
             mesh.Color(c1, c1, c1);
 
-            LoadFace(mesh, x, y, z, 1);
+            LodaFace(mesh, x, y, z, 1);
         }
         if (!level.IsSolidBlock(x, y - 1, z))
         {
             mesh.Color(c2, c2, c2);
 
-            LoadFace(mesh, x, y, z, 2);
+            LodaFace(mesh, x, y, z, 2);
         }
         if (!level.IsSolidBlock(x, y + 1, z))
         {
             mesh.Color(c2, c2, c2);
 
-            LoadFace(mesh, x, y, z, 3);
+            LodaFace(mesh, x, y, z, 3);
         }
         if (!level.IsSolidBlock(x, y, z - 1))
         {
             mesh.Color(c3, c3, c3);
 
-            LoadFace(mesh, x, y, z, 4);
+            LodaFace(mesh, x, y, z, 4);
         }
         if (!level.IsSolidBlock(x, y, z + 1))
         {
             mesh.Color(c3, c3, c3);
 
-            LoadFace(mesh, x, y, z, 5);
+            LodaFace(mesh, x, y, z, 5);
         }
     }
-    
+
     protected virtual int GetTexture(int face)
     {
         return tex;
     }
 
-    public void LoadFace(Mesh mesh, int x, int y, int z, int face)
+    public void LodaFace(Mesh mesh, int x, int y, int z, int face)
     {
         float x0 = (float)x + 0.0f;
         float y0 = (float)y + 0.0f;
@@ -95,46 +101,46 @@ public class Block
 
         if (face == 0)
         {
-            mesh.Vertex3_UV(x0, y0, z0, u0, v1);
-            mesh.Vertex3_UV(x0, y0, z1, u1, v1);
-            mesh.Vertex3_UV(x0, y1, z1, u1, v0);
-            mesh.Vertex3_UV(x0, y1, z0, u0, v0);
+            mesh.VertexUV(x0, y0, z0, u0, v1);
+            mesh.VertexUV(x0, y0, z1, u1, v1);
+            mesh.VertexUV(x0, y1, z1, u1, v0);
+            mesh.VertexUV(x0, y1, z0, u0, v0);
         }
         if (face == 1)
         {
-            mesh.Vertex3_UV(x1, y0, z1, u0, v1);
-            mesh.Vertex3_UV(x1, y0, z0, u1, v1);
-            mesh.Vertex3_UV(x1, y1, z0, u1, v0);
-            mesh.Vertex3_UV(x1, y1, z1, u0, v0);
+            mesh.VertexUV(x1, y0, z1, u0, v1);
+            mesh.VertexUV(x1, y0, z0, u1, v1);
+            mesh.VertexUV(x1, y1, z0, u1, v0);
+            mesh.VertexUV(x1, y1, z1, u0, v0);
         }
         if (face == 2)
         {
-            mesh.Vertex3_UV(x0, y0, z0, u0, v1);
-            mesh.Vertex3_UV(x1, y0, z0, u1, v1);
-            mesh.Vertex3_UV(x1, y0, z1, u1, v0);
-            mesh.Vertex3_UV(x0, y0, z1, u0, v0);
+            mesh.VertexUV(x0, y0, z0, u0, v1);
+            mesh.VertexUV(x1, y0, z0, u1, v1);
+            mesh.VertexUV(x1, y0, z1, u1, v0);
+            mesh.VertexUV(x0, y0, z1, u0, v0);
         }
         if (face == 3)
         {
-            mesh.Vertex3_UV(x0, y1, z1, u0, v1);
-            mesh.Vertex3_UV(x1, y1, z1, u1, v1);
-            mesh.Vertex3_UV(x1, y1, z0, u1, v0);
-            mesh.Vertex3_UV(x0, y1, z0, u0, v0);
+            mesh.VertexUV(x0, y1, z1, u0, v1);
+            mesh.VertexUV(x1, y1, z1, u1, v1);
+            mesh.VertexUV(x1, y1, z0, u1, v0);
+            mesh.VertexUV(x0, y1, z0, u0, v0);
         }
         if (face == 4)
         {
-            mesh.Vertex3_UV(x1, y0, z0, u0, v1);
-            mesh.Vertex3_UV(x0, y0, z0, u1, v1);
-            mesh.Vertex3_UV(x0, y1, z0, u1, v0);
-            mesh.Vertex3_UV(x1, y1, z0, u0, v0);
+            mesh.VertexUV(x1, y0, z0, u0, v1);
+            mesh.VertexUV(x0, y0, z0, u1, v1);
+            mesh.VertexUV(x0, y1, z0, u1, v0);
+            mesh.VertexUV(x1, y1, z0, u0, v0);
         }
         if (face == 5)
         {
-            mesh.Vertex3_UV(x0, y0, z1, u0, v1);
-            mesh.Vertex3_UV(x1, y0, z1, u1, v1);
-            mesh.Vertex3_UV(x1, y1, z1, u1, v0);
-            mesh.Vertex3_UV(x0, y1, z1, u0, v0);
-        }        
+            mesh.VertexUV(x0, y0, z1, u0, v1);
+            mesh.VertexUV(x1, y0, z1, u1, v1);
+            mesh.VertexUV(x1, y1, z1, u1, v0);
+            mesh.VertexUV(x0, y1, z1, u0, v0);
+        }
     }
 
     public void LoadFaceNoTexture(Mesh mesh, int x, int y, int z, int face)
@@ -149,52 +155,46 @@ public class Block
 
         if (face == 0)
         {
-            mesh.Vertex3(x0, y0, z0);
-            mesh.Vertex3(x0, y0, z1);
-            mesh.Vertex3(x0, y1, z1);
-            mesh.Vertex3(x0, y1, z0);
+            mesh.Vertex(x0, y0, z0);
+            mesh.Vertex(x0, y0, z1);
+            mesh.Vertex(x0, y1, z1);
+            mesh.Vertex(x0, y1, z0);
         }
         if (face == 1)
         {
-            mesh.Vertex3(x1, y0, z1);
-            mesh.Vertex3(x1, y0, z0);
-            mesh.Vertex3(x1, y1, z0);
-            mesh.Vertex3(x1, y1, z1);
+            mesh.Vertex(x1, y0, z1);
+            mesh.Vertex(x1, y0, z0);
+            mesh.Vertex(x1, y1, z0);
+            mesh.Vertex(x1, y1, z1);
         }
         if (face == 2)
         {
-            mesh.Vertex3(x0, y0, z0);
-            mesh.Vertex3(x1, y0, z0);
-            mesh.Vertex3(x1, y0, z1);
-            mesh.Vertex3(x0, y0, z1);
+            mesh.Vertex(x0, y0, z0);
+            mesh.Vertex(x1, y0, z0);
+            mesh.Vertex(x1, y0, z1);
+            mesh.Vertex(x0, y0, z1);
         }
         if (face == 3)
         {
-            mesh.Vertex3(x0, y1, z1);
-            mesh.Vertex3(x1, y1, z1);
-            mesh.Vertex3(x1, y1, z0);
-            mesh.Vertex3(x0, y1, z0);
+            mesh.Vertex(x0, y1, z1);
+            mesh.Vertex(x1, y1, z1);
+            mesh.Vertex(x1, y1, z0);
+            mesh.Vertex(x0, y1, z0);
         }
         if (face == 4)
         {
-            mesh.Vertex3(x1, y0, z0);
-            mesh.Vertex3(x0, y0, z0);
-            mesh.Vertex3(x0, y1, z0);
-            mesh.Vertex3(x1, y1, z0);
+            mesh.Vertex(x1, y0, z0);
+            mesh.Vertex(x0, y0, z0);
+            mesh.Vertex(x0, y1, z0);
+            mesh.Vertex(x1, y1, z0);
         }
         if (face == 5)
         {
-            mesh.Vertex3(x0, y0, z1);
-            mesh.Vertex3(x1, y0, z1);
-            mesh.Vertex3(x1, y1, z1);
-            mesh.Vertex3(x0, y1, z1);
+            mesh.Vertex(x0, y0, z1);
+            mesh.Vertex(x1, y0, z1);
+            mesh.Vertex(x1, y1, z1);
+            mesh.Vertex(x0, y1, z1);
         }
-    }
-
-    public AABB GetAABB(int x, int y, int z)
-    {
-        return new AABB((float)x, (float)y, (float)z,
-                        (float)(x + 1), (float)(y + 1), (float)(z + 1));
     }
 
     public bool IsSolid()

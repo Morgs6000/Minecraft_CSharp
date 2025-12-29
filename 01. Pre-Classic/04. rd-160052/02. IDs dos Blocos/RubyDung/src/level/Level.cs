@@ -8,7 +8,7 @@ public class Level
     public readonly int height;
     public readonly int depth;
 
-    private byte[,,] blocks;
+    private byte[] blocks;
 
     public Level(int w, int h, int d)
     {
@@ -16,14 +16,14 @@ public class Level
         height = h;
         depth = d;
 
-        blocks = new byte[w, h, d];
+        blocks = new byte[w * h * d];
 
         bool mapLoaded = Load();
 
         if (!mapLoaded)
         {
             GenerateMap();
-        }
+        }        
     }
     
     private void GenerateMap()
@@ -38,24 +38,23 @@ public class Level
             {
                 for (int z = 0; z < d; z++)
                 {
+                    int i = (x + y * width) * depth + z;
                     int id = 0;
-
-                    int dh = h * 2 / 3;
-
-                    if (y == dh)
+                    
+                    if(y == h * 2 / 3)
                     {
                         id = Block.grass.id;
                     }
-                    if (y < dh)
+                    if(y < h * 2 / 3)
                     {
                         id = Block.dirt.id;
                     }
-                    if (y <= dh - 5)
+                    if(y <= (h * 2 / 3) - 5)
                     {
                         id = Block.rock.id;
-                    }                    
+                    }
 
-                    blocks[x, y, z] = (byte)id;
+                    blocks[i] = (byte)id;
                 }
             }
         }
@@ -65,95 +64,39 @@ public class Level
     {
         try
         {
-            string file = "level.dat";
-            string filePath = $"save/{file}";
-            string directoryPath = Path.GetDirectoryName(filePath);
-
-            // Cria o diretório se não existir
-            if (!string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-                Debug.Log($"Diretório criado: {directoryPath}");
-            }
-            if (!File.Exists(filePath))
-            {
-                Debug.LogWarning("Arquivo 'level.dat' não encontrado. Criando novo nível.");
-
-                return false;
-            }
-            
-            using(FileStream fs = new FileStream(filePath, FileMode.Open))
-            using(GZipStream gzip = new GZipStream(fs, CompressionMode.Decompress))
+            using (FileStream fs = new FileStream("level.dat", FileMode.Open))
+            using (GZipStream gzip = new GZipStream(fs, CompressionMode.Decompress))
             using (BinaryReader dis = new BinaryReader(gzip))
             {
-                for (int x = 0; x < width; x++)
-                {
-                    for (int y = 0; y < height; y++)
-                    {
-                        for (int z = 0; z < depth; z++)
-                        {
-                            blocks[x, y, z] = dis.ReadByte();
-                        }
-                    }
-                }
-
+                dis.Read(blocks, 0, blocks.Length);
                 dis.Close();
-
-                Debug.LogSuccess("Nível carregado com sucesso!");
 
                 return true;
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Erro ao carregar nível: {e.Message}");
-            Debug.LogError(e.StackTrace);
-            // throw;
+            Console.WriteLine(e.StackTrace);
 
             return false;
         }
     }
-
+    
     public void Save()
     {
         try
         {
-            string file = "level.dat";
-            string filePath = $"save/{file}";
-            string directoryPath = Path.GetDirectoryName(filePath);
-
-            // Cria o diretório se não existir
-            if (!string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-                Debug.Log($"Diretório criado: {directoryPath}");
-            }
-
-            using (FileStream fs = new FileStream(filePath, FileMode.Create))
+            using (FileStream fs = new FileStream("level.dat", FileMode.Create))
             using (GZipStream gzip = new GZipStream(fs, CompressionMode.Compress))
             using (BinaryWriter dos = new BinaryWriter(gzip))
             {
-                for (int x = 0; x < width; x++)
-                {
-                    for (int y = 0; y < height; y++)
-                    {
-                        for (int z = 0; z < depth; z++)
-                        {
-                            dos.Write(blocks[x, y, z]);
-                        }
-                    }
-                }
-
+                dos.Write(blocks);
                 dos.Close();
-
-                Debug.LogSuccess("Nível salvo com sucesso!");
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Erro ao salvar nível: {e.Message}");
-            Debug.LogError(e.StackTrace);
-            throw;
+            Console.WriteLine(e.StackTrace);
         }
     }
 
@@ -195,17 +138,18 @@ public class Level
             z1 = this.depth;
         }
 
-        for (int x = x0; x < x1; ++x)
+        for (int x = x0; x < x1; x++)
         {
-            for (int y = y0; y < y1; ++y)
+            for (int y = y0; y < y1; y++)
             {
-                for (int z = z0; z < z1; ++z)
+                for (int z = z0; z < z1; z++)
                 {
-                    Block block = Block.blocks[GetBlock(x, y, z)];
-
-                    if (block != null)
+                    if (this.IsSolidBlock(x, y, z))
                     {
-                        cubes.Add(block.GetAABB(x, y, z));
+                        cubes.Add(new AABB(
+                            (float)x, (float)y, (float)z,
+                            (float)(x + 1), (float)(y + 1), (float)(z + 1))
+                        );
                     }
                 }
             }
@@ -220,19 +164,19 @@ public class Level
             y >= 0 && y < height &&
             z >= 0 && z < depth)
         {
-            blocks[x, y, z] = (byte)type;
+            blocks[(x + y * width) * depth + z] = (byte)type;
         }
     }
 
     public int GetBlock(int x, int y, int z)
     {
         if (x >= 0 && x < width &&
-            y >= 0 && y < height &&
-            z >= 0 && z < depth)
+           y >= 0 && y < height &&
+           z >= 0 && z < depth)
         {
-            return blocks[x, y, z];
+            return blocks[(x + y * width) * depth + z];
         }
-        
+
         return 0;
     }
 

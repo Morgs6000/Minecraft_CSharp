@@ -2,7 +2,7 @@ namespace RubyDung;
 
 public class BlockGrass : Block
 {
-    public BlockGrass() : base()
+    public BlockGrass()
     {
         tex = 3;
     }
