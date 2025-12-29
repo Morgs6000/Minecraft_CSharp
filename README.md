@@ -34,9 +34,9 @@ E o instagram, só pra ter...
 
 ## Bugs
 
-* Precisa arrumar a altura da Camera
-* O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede
-* O arquivo 'level.dat' comprimido apresenta problemas para salvar e carregar o jogo
+* Precisa arrumar a altura da Camera, o jogador tem uma largura de 0.6f, altura de 1.8f, e altura dos olhos de 1.62f.
+* O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede.
+* O arquivo 'level.dat' comprimido apresenta problemas para salvar e carregar o jogo.
 
 ## Versões
 
