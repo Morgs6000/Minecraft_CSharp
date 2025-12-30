@@ -1,12 +1,18 @@
 # Minecraft_CSharp_OpenTK
 
-Para de reclamar que tem um monte de pasta, procura a p@#$% da pasta que você quer, copia a p@#$% do URL e cola nessa p@#$% desse link: 
+Não, não sei usar GitHub, e não, não vou aprender, não faço questão de aprender, ninguem ta me ajudando com esta m@#$%, povo fala que vai ajudar e some. Aprendi a editar o README.md pra deixar o mais mastigadinho possivel.
+
+Então para de reclamar que tem um monte de pasta, procura a p@#$% da pasta que você quer, copia a p@#$% do URL, e cola nessa p@#$% desse link: 
 
   * <img src="https://github.com/user-attachments/assets/ed00c22a-2aa4-4854-be83-83e270da6d27" width="30" height="30"> [Download GitHub Directory](https://download-directory.github.io/)
 
 ## 📖 Sobre
 
 Este projeto tem como objetivo recriar as primeiras versões do Minecraft, sem engine, usando a linguagem C# e a blioteca OpenTK.
+
+Baixe os executaveis do projeto neste link para testar, e se possivel nos mande um feedback:
+
+* 🎮 [Versões](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/releases/tag/Teste)
 
 Quem quiser ajudar com o projeto seja bem-vindo a se juntar a nós no Discord:
 
@@ -59,6 +65,7 @@ E o instagram, só pra ter...
 * Escalada aranha corrigida, mas se o jogador ficar pressionando Espaço contra uma parede, ainda consegue escalar.
 * Despausar nao faz mais com que o jogador caia para fora do mundo.
 * Despausar não faz mais a camera se mover instantaneamente em uma direção "aleatória".
+* Corrigito crosshair. Um testador relatou que crosshair não acompanhava o redimensionamento de tela.
 
 ## 💾 Versões
 
@@ -87,8 +94,8 @@ Abaixo, links de acesso rapido as pastas que estão em progresso ou ja foram con
 **Classic | Private Alpha**
 * 🟨 [0.0.2a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/01.%200.0.2a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.2a)
 * 🟨 [0.0.3a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/02.%200.0.3a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.3a)
-* 🟨 [0.0.9a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/02.%200.0.9a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.9a)
-* 🟨 [0.0.10a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/03.%200.0.10a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.10a)
+* 🟨 [0.0.9a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/03.%200.0.9a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.9a)
+* 🟨 [0.0.10a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/04.%200.0.10a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.10a)
 
 **Classic | Early Classic**
 * 🟥 [0.0.12a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/02.%20Early%20Classic/01.%200.0.12a) >> [wiki](https://minecraft.wiki/w/Java_Edition_Classic_0.0.12a)
