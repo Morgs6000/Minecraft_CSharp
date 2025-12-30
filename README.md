@@ -39,6 +39,7 @@ E o instagram, só pra ter...
 * O jogador nasce abaixo do mundo por causa da gravidade.
 * Foi adicionado um delay de 5 segundo antes de dar os Updates da camera.
 * * para não ter que esperar pelo delay, se a tela ja apareceu para o jogador, basta dar um click com o mouse.
+* Jogador dando umas enroscadas no chão enquanto anda.
 * O jogador quando esta encostado em uma parede com mais de 2 blocos de altura e tenta pular, ele escala a parede.
 
 **rd-132211**
@@ -52,13 +53,11 @@ E o instagram, só pra ter...
   * O arquivo comprimido pesa cerca de 30 KB, enquanto o arquivo não comprido pesa cerca de 4.000 KB, isso falando de um mundo de 256x64x256 blcoos (16x4x16 chunks).
 * não sei gerar o bloco da GUI e a mira na mesma malha, se é que isso é possivel.
 
-**0.0.10a**
-* Despausar o jogo faz com que o jogador caia do mundo.
-
 ## 📝 Correções
 
 * Altura da camera corrigina.
 * Escalada aranha corrigida, mas se o jogador ficar pressionando Espaço contra uma parede, ainda consegue escalar.
+* Despausar nao faz mais com que o jogador caia para fora do mundo.
 
 ## 💾 Versões
 
