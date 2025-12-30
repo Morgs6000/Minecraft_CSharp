@@ -72,7 +72,7 @@ Abaixo, links de acesso rapido as pastas que estão em progresso ou ja foram con
 * 🟩 Concluido
 * 🟨 Iniciado e/ou Precisa de correções
 * 🟥 Não iniciado
-* ⁉️ Não faço ideia
+* ⁉️ Alguma versão que talvez não altere nada de util e eu vou remvoer da lista depois...
 
 ### Pré-Classico
 
