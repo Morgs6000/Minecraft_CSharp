@@ -1,6 +1,6 @@
 # Minecraft_CSharp_OpenTK
 
-Não, não sei usar GitHub, e não, não vou aprender, não faço questão de aprender, ninguem ta me ajudando com esta m@#$%, povo fala que vai ajudar e some.
+Não, não sei usar GitHub, e não, não vou aprender, não faço questão de aprender, ninguem ta me ajudando com esta m@#$%, povo fala que vai ajudar e some. Aprendi a editar o README.md pra deixar o mais mastigadinho possivel.
 
 Então para de reclamar que tem um monte de pasta, procura a p@#$% da pasta que você quer, copia a p@#$% do URL, e cola nessa p@#$% desse link: 
 
