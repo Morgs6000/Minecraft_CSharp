@@ -70,7 +70,7 @@ Abaixo, links de acesso rapido as pastas que estão em progresso ou ja foram con
 
 **Legenda:**
 * 🟩 Concluido
-* 🟨 Iniciado
+* 🟨 Iniciado e/ou Precisa de correções
 * 🟥 Não iniciado
 * ⁉️ Não faço ideia
 
