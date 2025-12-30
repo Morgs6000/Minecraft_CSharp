@@ -86,7 +86,7 @@ Abaixo, links de acesso rapido as pastas que estão em progresso ou ja foram con
 
 **Classic | Private Alpha**
 * 🟨 [0.0.2a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/01.%200.0.2a)
-* ⁉️ 0.0.3a
+* 🟨 [0.0.3a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/02.%200.0.3a)
 * 🟨 [0.0.9a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/02.%200.0.9a)
 * 🟨 [0.0.10a](https://github.com/Morgs6000/Minecraft_CSharp_OpenTK/tree/main/02.%20Classic/01.%20Private%20Alpha/03.%200.0.10a)
 
