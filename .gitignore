@@ -1,6 +1,7 @@
 # Ignorar pastas de compilação e binários
 bin/
 obj/
+pub/
 
 # Ignorar arquivos de projeto e solução (Use com cautela)
 *.csproj
@@ -8,3 +9,5 @@ obj/
 
 # Ignorar saves
 level.dat
+.bat
+
